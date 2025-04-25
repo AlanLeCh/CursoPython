@@ -42,3 +42,4 @@ print(df_Estudiantes)
 np.random.uniform(1,100, size=1000)
 
 df_Estudiantes['language_score'].round
+
