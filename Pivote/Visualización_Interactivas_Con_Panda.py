@@ -44,7 +44,7 @@ fig_line.show()
 ##########################################################################################################
 
 #Seleccionando el año 2020
-#df_population_2020 = df_population[df_population.index.isin([2020])]
+df_population_2020 = df_population[df_population.index.isin([2020])]
 
 #mostrar resultado
-#print(df_population_2020)
+print(df_population_2020)
