@@ -23,3 +23,8 @@ Agrupacion = df_car.groupby('Manufacturer').agg (suma_sales = ('Sales_in_thousan
 
 #Se imprime el DataFrame
 print(Agrupacion)
+
+#Mostrar el tamaño de un array de los Frame
+print (df_car.shape)
+
+print (Agrupacion.shape)
