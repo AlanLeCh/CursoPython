@@ -71,10 +71,20 @@ print(df_query)
 #EJERCICIO con DataFrame de películas e ratings (Exclusive Left Join)
 
 #Hacer copia de DataFrame df_movies
-
-
+df_movies_2 = df_movies.copy()
 #Fijar primero 1000 valores e columna 'imdb_title_id' el valor 'tt1234567890'
-
+for index in df_movies_2.index:
+    if index < 1000:
+        df_movies_2.at[index, 'imdb_title_id'] = 'tt1234567890'
 #Merge df_movies_2 y df_rating (exclusive left join)
+df_movies_2_rating = df_movies_2.merge(df_rating, on = 'imdb_title_id', how = 'outer', indicator = True).query("_merge == 'left_only' ")
+
+#Muestra de resultado
+print(df_movies_2_rating)
 
 #shape
+print(df_movies_2.shape)
+print(df_rating.shape)
+print(df_movies_2_rating.shape)
+
+
